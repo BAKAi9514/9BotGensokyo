@@ -16,11 +16,28 @@
 
 根据`ctx.SendChain`来寻找机器人的台词，例如…
 
-![e.g.](https://BAKAi9514.github.io/9BotGensokyo/#/media/Screenshot_1.jpg)
+```go
+func init() { // 插件主体
+// 被喊名字
+engine.OnFullMatch("", zero.OnlyToMe).SetBlock(true).
+Handle(func(ctx *zero.Ctx) {
+var nickname = zero.BotConfig.NickName[0]
+time.Sleep(time.Second * 1)
+ctx.SendChain(message.Text(
+    []string{
+        nickname + "在此，有何贵干~",
+	"(っ●ω●)っ在~",
+	"这里是" + nickname + "(っ●ω●)っ",
+	nickname + "不在呢~",
+    }[rand.Intn(4)],
+    ))
+})
+// 戳一戳
+```
 
-如图，从`engine.OnFullMatch`到与其相闭合的括号结束，这是一套回复。在其他插件里，这个构造也是一样的，只不过`engine.`后面的内容会随着所需匹配回复的规则而改变。
+如上，从`engine.OnFullMatch`到与其相闭合的括号结束，这是一套回复。在其他插件里，这个构造也是一样的，只不过`engine.`后面的内容会随着所需匹配回复的规则而改变。
 
-看到图中的`ctx.SendChain`了吗？后面跟着的就是机器人对于此内容的回复。你可以在此处进行修改。要注意的是，这里选择了切片来存储一组机器人的回复。机器人被触发这个功能时，会从这一组回复中随机抽取一句发送。**一组回复中不同的回复要用**`,`**分隔，即使到该切片最后一句，后面也要加上**`,`。
+看到`ctx.SendChain`了吗？后面跟着的就是机器人对于此内容的回复。你可以在此处进行修改。要注意的是，这里选择了切片来存储一组机器人的回复。机器人被触发这个功能时，会从这一组回复中随机抽取一句发送。**一组回复中不同的回复要用**`,`**分隔，即使到该切片最后一句，后面也要加上**`,`。
 
 此处本插件还声明了一个变量。
 ```go
