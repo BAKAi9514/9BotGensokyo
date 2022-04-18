@@ -48,7 +48,7 @@
     3. 编辑 main.go 文件，内容按需修改
     4. 前往 Release 页面发布一个 Release，tag形如v1.2.3，以触发稳定版编译流程
     5. 点击 Actions 按钮，等待编译完成，回到 Release 页面下载编译好的文件
-    6. ~我们才不会在最后一条写啾咪~
+    6. ~~我们才不会在最后一条写啾咪~~
   - 选择`git clone`这个仓库到装好[GoLang环境](https://studygolang.com/dl)的本地进行编译
     1. 下载安装最新[Go](https://studygolang.com/dl)环境
     2. `git clone`并进入本项目，下载所需包
@@ -76,11 +76,9 @@ GOOS=linux GOARCH=arm GOARM=6 CGO_ENABLED=0 go build -ldflags "-s -w" -o zerobot
 
 ### 懒人包程度的方法
 
-在这里，FloatTech提供了[gocqzbp](https://github.com/FloatTech/gocqzbp)~贴贴~整合包，~只用运行一个可执行文件的好时代来临啦~
+在这里，FloatTech提供了[gocqzbp](https://github.com/FloatTech/gocqzbp)~~贴贴~~整合包，~~只用运行一个可执行文件的好时代来临啦~~
 
 你还可以使用该项目的[docker版](https://github.com/FloatTech/gocqzbp/pkgs/container/gocqzbp)。
-
-?> 几乎做到了即下载即用、是十分便捷的项目！
 
 ## 真不错！
 

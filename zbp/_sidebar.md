@@ -4,5 +4,5 @@
 
 * 插件
 
-  * [FloatTechZBP](/zbp/ft.md)
+  * [FloatTechZbp](/zbp/ft.md)
   * [自行编写](/zbp/diy.md)
