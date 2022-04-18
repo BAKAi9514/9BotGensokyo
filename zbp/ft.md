@@ -16,7 +16,7 @@
 
 根据`ctx.SendChain`来寻找机器人的台词，例如…
 
-![e.g.](https://BAKAi9514.github.io/9BotGensokyo/#/_media/Screenshot_1.jpg)
+![e.g.](https://BAKAi9514.github.io/9BotGensokyo/#/media/Screenshot_1.jpg)
 
 如图，从`engine.OnFullMatch`到与其相闭合的括号结束，这是一套回复。在其他插件里，这个构造也是一样的，只不过`engine.`后面的内容会随着所需匹配回复的规则而改变。
 
